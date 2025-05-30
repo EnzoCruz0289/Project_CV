@@ -1,3 +1,10 @@
+
+
+
+::-webkit-scrollbar {
+  display: none; /* oculta en Chrome/Safari */
+}
+
 .pantalla-completa {
   padding: 80px;
   position: relative;
@@ -106,7 +113,7 @@
   
   .contenido {
     margin-left: 40%; /* espacio para la columna fija */
-    padding: 40px;
+    padding: 10px;
     flex: 1;
     background-color: #33333300;
     color: white;
