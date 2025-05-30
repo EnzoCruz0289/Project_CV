@@ -1,0 +1,116 @@
+.pantalla-completa {
+  padding: 80px;
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.021), transparent 350px), 
+  linear-gradient(90deg,rgba(14, 8, 20, 1) 0%, rgba(30, 4, 33, 1) 56%, rgba(24, 11, 33, 1) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background 0.1s ease;
+  font-family: 'Times New Roman', Times, serif;
+  }
+
+    /* contenido imagen de perfil y estilo de borde */
+
+  .circle-container {
+    width: 316px; 
+    height: 316px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #8400ff, #0041bb, #004739, #050400);
+    background-size: 400% 400%;
+    animation: rotateBorder 6s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px; 
+    box-sizing: border-box;
+  }
+
+  .circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #e2dede;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  /* Animación del gradiente */
+  @keyframes rotateBorder {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+
+  .horizontal-text {
+    display: flex;
+    justify-content: flex-start;  /* Alinea los elementos a la izquierda */
+    align-items: center;          /* Alineación vertical centrada */
+    gap: 120px;                    /* Espacio entre los elementos */
+    margin-left: 0px;           
+  }
+  .text-item {
+    color: white;
+    font-size: 22px;  /* Tamaño del texto */
+    cursor: pointer;  /* Estilo de cursor para simular un botón */
+    padding: 10px 15px;  /* Espaciado dentro del "botón" */
+    background-color: #f0f0f000;  /* Fondo del "botón" */
+    border-radius: 15px;  /* Bordes redondeados */
+    text-align: center;  /* Centrar el texto */
+    border: 0px solid #ccc;  /* Borde para simular un botón */
+    transition: background-color 0.3s, transform 0.2s;  /* Animación suave */
+    margin-left: -40px; /* Ajusta este valor según lo que necesites para mover los botones hacia la izquierda */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .text-item:hover {
+    background-color: #280096;  /* Cambio de color al pasar el ratón */
+    transform: scale(1.05);  /* Efecto de escala al hacer hover */
+  }
+  
+  .text-item:active {
+    background-color: #00ccff;  /* Color de fondo cuando se hace clic */
+    transform: scale(0.95);  /* Efecto de "clic" */
+  }
+
+  
+  .fija {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #22222200;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 10;
+    margin-left: 0px;
+    width: 40%;
+  }
+  
+  .contenido {
+    margin-left: 40%; /* espacio para la columna fija */
+    padding: 40px;
+    flex: 1;
+    background-color: #33333300;
+    color: white;
+    box-sizing: border-box;
+  }
+
+  
